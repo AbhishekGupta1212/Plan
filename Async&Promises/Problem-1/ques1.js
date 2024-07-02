@@ -4,14 +4,17 @@ let sum=0;
 let avg=1;
 for(let i=0;i<arr.length;i++){
     sum+=arr[i]
-    avg=sum/arr.length;
 }
+ avg=sum/arr.length;
     let promise=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
 if(avg>=score){
     resolve(avg)
 }else{
     reject("Sory you haven't cleared the score")
 }
+        },2000)
+
 })
 console.log(promise)
 }
